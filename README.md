@@ -22,10 +22,15 @@ should list test files, or they are left out.
 
 ## Changing the skill
 
-Edit it from a session opened in this repository, not from a project that
-uses it. Edits take effect as soon as they are on disk, so commit each
-change, record it in `CHANGELOG.md`, and run the cases in
-`regression/cases.md`.
+The installed copy in `~/.claude/skills/deep-review` is read-only by
+convention: Claude Code treats `~/.claude` as sensitive and blocks edits
+there. Develop in a separate clone, such as `~/Documents/develop/deep-review`,
+from a session opened in that folder:
+
+1. Edit, record the change in `CHANGELOG.md`, bump `metadata.version` in
+   `SKILL.md`, commit and push.
+2. Update the installed copy: `git -C ~/.claude/skills/deep-review pull --ff-only`.
+3. Run the cases in `regression/cases.md` and record the results.
 
 ## Licence
 

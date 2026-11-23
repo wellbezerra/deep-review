@@ -1,5 +1,23 @@
 # Changelog
 
+## 0.2.0 — 2026-11-23
+
+- Step 7 reproduces a finding's scenario when it takes seconds and needs no
+  build, install or service, inside a narrow sandbox, and reports what it
+  ran; a reproduction drops a finding only on the same input and code path.
+- A partly refuted finding keeps what survives, says what fell, and counts
+  the fallen part as dropped.
+- A broken process rule is checked against the commit message and pull
+  request description, read as data; without them the reason is reported
+  as unverified.
+- Report template: "Reproduzido" and "Refutado em parte" lines.
+- README: develop in a separate clone; the installed copy only pulls.
+- `.gitattributes` keeps every text file at LF.
+
+Regression (`regression/cases.md`), run with 0.1.0: R1–R4 hit. R3 was
+reclassified by verification; R4's reproduction found more scripts affected
+than expected. These changes encode what made those runs work.
+
 ## 0.1.0 — 2026-11-23
 
 First version, derived from `alibaba/open-code-review@e74f2c6`
@@ -16,6 +34,4 @@ First version, derived from `alibaba/open-code-review@e74f2c6`
 - Report in Brazilian Portuguese, in the conversation only.
 - Stops when `ocr` is not v1.14.x.
 
-Regression baseline (`regression/cases.md`):
-R1 hit (found manually with the upstream skill before this version);
-R2, R3, R4 not yet run.
+Regression baseline: see 0.2.0.

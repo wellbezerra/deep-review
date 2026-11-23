@@ -20,6 +20,8 @@ Cobertura, which always appears.
 - **`path/to/file.ts:88`** [portabilidade] — …
   - **Cenário:** …
   - **Não verificado:** o que dependeria de ambiente/versão (se houver).
+  - **Reproduzido:** o comando rodado e o que retornou (se houver).
+  - **Refutado em parte:** o que caiu e por quê; o finding é o que sobrou.
 
 ### Baixo
 
