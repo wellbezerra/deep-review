@@ -1,0 +1,7 @@
+{
+  "include": [
+    "**/*.test.{js,jsx,ts,tsx,mjs,mts,cjs,cts}",
+    "**/*.spec.{js,jsx,ts,tsx,mjs,mts,cjs,cts}",
+    "**/__tests__/**"
+  ]
+}
